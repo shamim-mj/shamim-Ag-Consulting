@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHAMIM Ag Consulting, LLC | Drone Mapping, Scouting & Ag Data Management</title>
+<meta name="description" content="Independent precision agronomy in Kentucky: field maps, high-resolution DEM, stand counts, crop scouting, soil sampling, yield analysis, management zones, and variable-rate prescriptions.">
+<link rel="icon" href="favicon.png">
+<style>
+:root{--navy:#1b2f57;--green:#3c8d2f;--leaf:#6dbb3c;--light:#f3f8ef;--ink:#1f2933;--muted:#5b6670}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+a{color:var(--green)}
+.wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-weight:800;letter-spacing:.3px}
+.brand img{height:50px;width:50px;border-radius:50%;object-fit:cover}
+.brand small{display:block;font-weight:600;font-size:.72rem;color:var(--green);letter-spacing:1px}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{text-decoration:none;color:var(--navy);font-weight:600}
+nav a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--green);color:#fff!important;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:700;border:none;cursor:pointer;font-size:1rem}
+.btn:hover{background:#2f7424}
+.btn.alt{background:transparent;border:2px solid #fff}
+.menu-btn{display:none;background:none;border:none;font-size:1.8rem;color:var(--navy);cursor:pointer}
+/* hero */
+.hero{background:linear-gradient(135deg,rgba(27,47,87,.94),rgba(60,141,47,.88)),repeating-linear-gradient(45deg,#2c5 0 2px,transparent 2px 22px);color:#fff;padding:90px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:2.6rem;line-height:1.2;margin-bottom:18px}
+.hero p{font-size:1.15rem;opacity:.95;margin-bottom:28px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero img{width:100%;max-width:400px;border-radius:50%;background:#fff;padding:10px;box-shadow:0 15px 40px rgba(0,0,0,.3);justify-self:center}
+.badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;font-size:.95rem}
+.badges span::before{content:"✔ ";color:var(--leaf);font-weight:900}
+/* sections */
+section{padding:80px 0}
+.title{text-align:center;margin-bottom:46px}
+.title h2{font-size:2rem;color:var(--navy)}
+.title p{color:var(--muted);max-width:700px;margin:10px auto 0}
+.title h2::after{content:"";display:block;width:70px;height:4px;background:var(--leaf);margin:12px auto 0;border-radius:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border:1px solid #e3ebe0;border-radius:14px;padding:26px;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(27,47,87,.12);border-color:var(--leaf)}
+.card .ic{font-size:2rem;margin-bottom:10px}
+.card h3{color:var(--navy);margin-bottom:8px;font-size:1.15rem}
+.card p{color:var(--muted);font-size:.95rem}
+.bg{background:var(--light)}
+/* packages */
+.pk{text-align:center;position:relative}
+.pk.feat{border:2px solid var(--green)}
+.pk .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:.75rem;padding:3px 14px;border-radius:20px;font-weight:700}
+.pk ul{list-style:none;text-align:left;margin:16px 0}
+.pk li{padding:6px 0;border-bottom:1px dashed #dde6da;font-size:.95rem}
+.pk li::before{content:"✔ ";color:var(--green)}
+/* steps */
+.steps{counter-reset:s}
+.step{position:relative;padding-top:50px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:26px;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;align-items:center}
+.about img{width:100%;max-width:330px;justify-self:center}
+.about h3{color:var(--navy);font-size:1.5rem;margin-bottom:10px}
+.about p{margin-bottom:12px}
+/* form */
+.contact{display:grid;grid-template-columns:1fr 1.6fr;gap:36px}
+.info{background:var(--navy);color:#fff;border-radius:14px;padding:30px}
+.info h3{margin-bottom:14px}
+.info p{margin-bottom:14px}
+.info a{color:#bfe8a4}
+form{background:#fff;border-radius:14px;padding:30px;border:1px solid #e3ebe0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-weight:600;font-size:.9rem;margin:12px 0 5px;color:var(--navy)}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #cdd8c9;border-radius:8px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--leaf);border-color:transparent}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-top:6px}
+.checks label{font-weight:400;color:var(--ink);margin:0;display:flex;gap:8px;align-items:flex-start}
+.checks input{width:auto;margin-top:5px}
+#msg{margin-top:14px;font-weight:600}
+footer{background:#0f1d38;color:#c9d3e0;padding:30px 0;text-align:center;font-size:.9rem}
+@media(max-width:860px){
+ nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:16px 20px;gap:14px;box-shadow:0 8px 16px rgba(0,0,0,.08)}
+ nav ul.open{display:flex}
+ .menu-btn{display:block}
+ .hero .wrap,.about,.contact{grid-template-columns:1fr}
+ .hero{padding:60px 0;text-align:center}
+ .hero .cta,.badges{justify-content:center}
+ .hero h1{font-size:2rem}
+ .hero img{max-width:260px;grid-row:1}
+ .row,.checks{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a href="#home" class="brand"><img src="logo.jpg" alt="SHAMIM Ag Consulting logo"><span>SHAMIM AG CONSULTING<small>DATA-DRIVEN AGRONOMY</small></span></a>
+  <nav><ul id="menu">
+   <li><a href="#services"class="btn">Services</a></li>
+   <li><a href="#packages" class="btn">Packages</a></li>
+   <li><a href="#how" class="btn">How It Works</a></li>
+   <li><a href="#about" class="btn">About</a></li>
+   <li><a href="#contact" class="btn">Request Service</a></li>
+  </ul></nav>
+  <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+ </div>
+</header>
+
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <h1>Know every acre.<br>Make every input count.</h1>
+   <p>Independent precision agronomy for row-crop farmers: drone mapping, in-season scouting, soil sampling, yield analysis, and variable-rate prescriptions, backed by Ph.D.-level crop science.</p>
+   <div class="cta"><a href="#contact" class="btn">Get a Free Field Consultation</a><a href="#services" class="btn alt">Explore Services</a></div>
+   <div class="badges"><span>Independent, no product sales</span><span>Soybean · Corn · Wheat · Canola</span><span>Reports within 24 hours</span></div>
+  </div>
+  <img src="logo.jpg" alt="SHAMIM Ag Consulting, LLC logo">
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <div class="title"><h2>Our Services</h2><p>Everything you need to turn field data into better decisions, from planting through harvest and beyond.</p></div>
+  <div class="grid">
+   <div class="card"><div class="ic">🗺️</div><h3>Field Maps & High-Resolution DEM</h3><p>Accurate boundaries and acreage, plus cm-level elevation, slope, drainage and ponding-risk maps from drone imagery.</p></div>
+   <div class="card"><div class="ic">🌱</div><h3>Stand Counts</h3><p>Drone imagery and AI plant counting backed by manual stand count: plants per acre, gaps, and uniformity maps to support replant decisions.</p></div>
+   <div class="card"><div class="ic">🔍</div><h3>Frequent Field Scouting</h3><p>Weekly or bi-weekly scouting for weed pressure and resistance, nutrient deficiencies, insects, diseases, and drought or heat stress.</p></div>
+   <div class="card"><div class="ic">🚁</div><h3>Drone Flights & Crop Health</h3><p>RGB, NDVI/NDRE, and thermal imagery to spot problems early. Storm and hail damage documentation.</p></div>
+   <div class="card"><div class="ic">🧪</div><h3>Soil Sampling</h3><p>Traditional, grid, or zone sampling with lab coordination and soil-fertility maps (pH, P, K, OM, CEC).</p></div>
+   <div class="card"><div class="ic">📊</div><h3>Yield Data Analysis</h3><p>Cleaned, calibrated yield maps showing harvested area, total yield, productivity (bu/ac), moisture, and profit by zone.</p></div>
+   <div class="card"><div class="ic">🚜</div><h3>Operation Management</h3><p>Fuel use, running hours, field efficiency (ac/h), idle time, and cost per acre for every machine and operation.</p></div>
+   <div class="card"><div class="ic">🎯</div><h3>Yield & Management Zones</h3><p>Multi-year yield, terrain, and imagery combined into productivity zones for seeding, fertility, and sampling.</p></div>
+   <div class="card"><div class="ic">📍</div><h3>Variable-Rate Prescriptions</h3><p>Seeding, lime, P & K, and in-season N maps that load into John Deere, Case IH, Trimble, Raven, Ag Leader, and FieldView.</p></div>
+   <div class="card"><div class="ic">⚖️</div><h3>On-Farm Trials</h3><p>Replicated strip trials for varieties, rates, and products, with statistical analysis you can trust.</p></div>
+   <div class="card"><div class="ic">🌦️</div><h3>Crop Modeling & Weather Risk</h3><p>Yield forecasting, planting-date and maturity scenarios, GDD and rainfall tracking, and spray-window alerts.</p></div>
+   <div class="card"><div class="ic">📁</div><h3>Farm Data Management</h3><p>Your data organized across platforms in an annual farm data book for landlords, lenders, and insurance. You own your data.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="packages" class="bg">
+ <div class="wrap">
+  <div class="title"><h2>Seasonal Packages</h2><p>Choose a package or order individual services. Pricing is per acre, and a custom quote is provided after a field visit.</p></div>
+  <div class="grid">
+   <div class="card pk"><h3>Essential</h3><ul><li>Bi-weekly field scouting</li><li>In-season reports with photos</li><li>Yield map cleaning</li><li>End-of-season summary</li></ul><a href="#contact" class="btn">Request Quote</a></div>
+   <div class="card pk feat"><span class="tag">MOST POPULAR</span><h3>Precision</h3><ul><li>Everything in Essential</li><li>Weekly scouting</li><li>Stand counts</li><li>2–3 drone NDVI flights</li><li>Yield & operation analysis</li><li>Variable-rate seeding prescription</li></ul><a href="#contact" class="btn">Request Quote</a></div>
+   <div class="card pk"><h3>Premier</h3><ul><li>Everything in Precision</li><li>High-resolution DEM & terrain</li><li>Management zones</li><li>All variable-rate prescriptions</li><li>On-farm trial</li><li>Annual farm data book</li><li>Priority response</li></ul><a href="#contact" class="btn">Request Quote</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="how">
+ <div class="wrap">
+  <div class="title"><h2>How It Works</h2></div>
+  <div class="grid steps">
+   <div class="card step"><h3>Consult</h3><p>We meet, walk your fields, and learn your goals, equipment, and data sources.</p></div>
+   <div class="card step"><h3>Map</h3><p>We map boundaries and terrain, and set up a soil sampling plan.</p></div>
+   <div class="card step"><h3>Monitor</h3><p>We scout and fly through the season and send rapid, clear reports.</p></div>
+   <div class="card step"><h3>Optimize</h3><p>We analyze yield and operations, then build next season's prescriptions.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="about" class="bg">
+ <div class="wrap about">
+  <img src="logo.jpg" alt="SHAMIM Ag Consulting logo">
+  <div>
+   <h3>Science you can use in the field</h3>
+   <p><strong>Mohammad Shamim, Ph.D.</strong> is a crop physiologist and agronomist with M.S. and Ph.D. degrees in Agricultural Science from Kyoto University, Japan. Dr. Shamim has served as Postdoctoral Researcher and Grain Crops Extension Associate for the University of Kentucky and has years of experiencing working directly with growers on soybean, corn, wheat, and canola, covering nutrient management, weed control, crop stress diagnosis, and on-farm research in Western Kentucky.</p>
+   <p>SHAMIM Ag Consulting is <strong>independent</strong>. We don't sell seed, fertilizer, or chemicals, so every recommendation is made only for your yield and your bottom line.</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="title"><h2>Request a Service</h2><p>Tell us about your operation and what you need. We'll respond within one business day.</p></div>
+  <div class="contact">
+   <div class="info">
+    <h3>Contact</h3>
+    <p>📧 <a href="mailto:info@shamimag.com">info@shamimag.com</a></p>
+    <p>📞 <a href="tel:+18595391251">(859) 539-1251</a></p>
+    <p>📍 Henderson, Kentucky<br>Serving Kentucky and surrounding states</p>
+    <p>🕒 Mon–Sat, 7 am–7 pm<br>In season, we're in the field. Leave a message and we'll call back.</p>
+   </div>
+   <!-- Replace YOUR_FORM_ID with your free Formspree form ID -->
+   <form id="reqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="row">
+     <div><label for="name">Full name *</label><input id="name" name="name" required></div>
+     <div><label for="farm">Farm / business name</label><input id="farm" name="farm"></div>
+    </div>
+    <div class="row">
+     <div><label for="email">Email *</label><input id="email" type="email" name="email" required></div>
+     <div><label for="phone">Phone *</label><input id="phone" type="tel" name="phone" required></div>
+    </div>
+    <div class="row">
+     <div><label for="county">County & state *</label><input id="county" name="county_state" placeholder="e.g., Fayette, KY" required></div>
+     <div><label for="acres">Approx. acres</label><input id="acres" type="number" min="0" name="acres"></div>
+    </div>
+    <div class="row">
+     <div><label for="crops">Crops</label><select id="crops" name="crops"><option>Soybean</option><option>Corn</option><option>Wheat</option><option>Canola</option><option>Multiple crops</option><option>Other</option></select></div>
+     <div><label for="contactpref">Preferred contact</label><select id="contactpref" name="preferred_contact"><option>Phone call</option><option>Text message</option><option>Email</option></select></div>
+    </div>
+    <label>Services of interest *</label>
+    <div class="checks">
+     <label><input type="checkbox" name="services" value="Field maps & DEM">Field maps & DEM</label>
+     <label><input type="checkbox" name="services" value="Stand counts">Stand counts</label>
+     <label><input type="checkbox" name="services" value="Field scouting">Field scouting</label>
+     <label><input type="checkbox" name="services" value="Drone flights">Drone flights / NDVI</label>
+     <label><input type="checkbox" name="services" value="Soil sampling - traditional">Soil sampling: traditional</label>
+     <label><input type="checkbox" name="services" value="Soil sampling - grid">Soil sampling: grid</label>
+     <label><input type="checkbox" name="services" value="Soil sampling - zone">Soil sampling: zone</label>
+     <label><input type="checkbox" name="services" value="Yield data analysis">Yield data analysis</label>
+     <label><input type="checkbox" name="services" value="Operation management">Operation management</label>
+     <label><input type="checkbox" name="services" value="Management zones">Management zones</label>
+     <label><input type="checkbox" name="services" value="Prescriptions">VR prescriptions</label>
+     <label><input type="checkbox" name="services" value="On-farm trials">On-farm trials</label>
+     <label><input type="checkbox" name="services" value="Package - Essential">Package: Essential</label>
+     <label><input type="checkbox" name="services" value="Package - Precision">Package: Precision</label>
+     <label><input type="checkbox" name="services" value="Package - Premier">Package: Premier</label>
+     <label><input type="checkbox" name="services" value="Not sure">Not sure, advise me</label>
+    </div>
+    <label for="notes">Tell us about your fields or concerns</label>
+    <textarea id="notes" name="message" rows="4" placeholder="e.g., yellow patches in soybean, planning grid sampling this winter..."></textarea>
+    <input type="text" name="_gotcha" style="display:none">
+    <br><br><button class="btn" type="submit">Submit Request</button>
+    <div id="msg" aria-live="polite"></div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">© <span id="yr"></span> SHAMIM Ag Consulting, LLC · Drone Mapping · Scouting · Ag Data Management · Henderson, KY</div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+const f=document.getElementById('reqForm'),m=document.getElementById('msg');
+f.addEventListener('submit',async e=>{
+ e.preventDefault();
+ if(!f.querySelector('input[name="services"]:checked')){m.style.color='#b33';m.textContent='Please select at least one service.';return;}
+ m.style.color='#1b2f57';m.textContent='Sending...';
+ try{
+  const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+  if(r.ok){f.reset();m.style.color='#3c8d2f';m.textContent='Thank you! Your request was received. We will contact you within one business day.';}
+  else throw 0;
+ }catch(_){m.style.color='#b33';m.innerHTML='Something went wrong. Please email <a href="mailto:info@shamimag.com">info@shamimag.com</a>.';}
+});
+</script>
+</body>
+</html>
